@@ -511,8 +511,14 @@ const AsyncAdvanceUIAutoCompleteComponent = Loadable({
 });
 
 // accounts list
-const AsyncDashboardComponent = Loadable({
+const AsyncAccountComponent = Loadable({
     loader: () => import("Routes/accounts/accounts-list.js"),
+    loading: () =>   <RctPageLoader />,
+});
+
+// accounts details
+const AsyncAccountDetailsComponent = Loadable({
+    loader: () => import("Routes/accounts/user-profile-1/index.js"),
     loading: () =>   <RctPageLoader />,
 });
 
@@ -601,5 +607,6 @@ export {
 	AsyncSaasDashboardComponent,
 
 	//new components
-	AsyncDashboardComponent
+	AsyncAccountComponent,
+	AsyncAccountDetailsComponent
 };

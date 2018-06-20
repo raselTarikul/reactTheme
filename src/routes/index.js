@@ -32,7 +32,9 @@ import {
 	AsyncChatComponent,
 	AsyncMailComponent,
 	AsyncTodoComponent,
-	AsyncDashboardComponent,
+	AsyncAccountComponent,
+	AsyncAccountDetailsComponent
+
 } from 'Components/AsyncComponent/AsyncComponent';
 
 
@@ -42,7 +44,7 @@ class MainApp extends Component {
 		const { match } = this.props;
 		return (
 			<RctAppLayout>
-				{/* <Route path={`${match.url}/dashboard`} component={Dashboard} />
+				<Route path={`${match.url}/dashboard`} component={Dashboard} />
 				<Route path={`${match.url}/widgets`} component={Widgets} />
 				<Route path={`${match.url}/ecommerce`} component={Ecommerce} />
 				<Route path={`${match.url}/icons`} component={Icons} />
@@ -60,8 +62,9 @@ class MainApp extends Component {
 				<Route path={`${match.url}/drag-andDrop`} component={DragAndDrop} />
 				<Route path={`${match.url}/forms`} component={FormElements} />
 				<Route path={`${match.url}/editor`} component={Editor} />
-				<Route path={`${match.url}/calendar`} component={CalendarComponents} /> */}
-				<Route path={`${match.url}/account-list`} component={AccountListPage} />
+				<Route path={`${match.url}/calendar`} component={CalendarComponents} /> 
+				<Route path={`${match.url}/account-list`} component={AsyncAccountComponent} />
+				<Route path={`${match.url}/account-details`} component={AsyncAccountDetailsComponent} />
 			</RctAppLayout>
 		);
 	}
