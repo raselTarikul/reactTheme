@@ -12,7 +12,6 @@ import Profile from './component/Profile';
 import EmailPrefrences from './component/EmailPrefrences';
 import Messages from './component/Messages';
 import Address from './component/Address';
-import UserBlock from './component/UserBlock';
 
 // rct card box
 import { RctCard } from 'Components/RctCard';
