@@ -18,7 +18,7 @@ const AppConfig = {
         name: 'English',
         icon: 'en',
     },
-    enableUserTour: true,                                      // Enable / Disable User Tour
+    enableUserTour: false,                                      // Enable / Disable User Tour
     copyRightText: 'Reactify © 2018 All Rights Reserved.',      // Copy Right Text
     // light theme colors
     themeColors: {

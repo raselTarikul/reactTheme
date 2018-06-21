@@ -7,17 +7,18 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 
+
 // Components
 import Profile from './component/Profile';
-import EmailPrefrences from './component/EmailPrefrences';
-import Messages from './component/Messages';
+import Subscription from './component/Subscription';
+import Transaction from './component/Transaction';
+import Card from './component/Card';
+
 import Address from './component/Address';
 
 // rct card box
 import { RctCard } from 'Components/RctCard';
-
-// page title bar
-import PageTitleBar from 'Components/PageTitleBar/PageTitleBar';
+;
 
 // intl messages
 import IntlMessages from 'Util/IntlMessages';
@@ -45,7 +46,6 @@ export default class UserProfile extends Component {
     const { activeTab } = this.state;
     return (
       <div className="userProfile-wrapper">
-        <PageTitleBar title={<IntlMessages id="sidebar.userProfile" />} match={this.props.match} />
         <RctCard>
           <div className="rct-tabs">
             <AppBar position="static">
@@ -56,10 +56,10 @@ export default class UserProfile extends Component {
                 scrollButtons="off"
                 indicatorColor="primary"
               >
-                <Tab icon={<i className="ti-user"></i>} label={<IntlMessages id="components.myProfile" />} />
-                <Tab icon={<i className="ti-email"></i>} label={<IntlMessages id="components.emailPrefrences" />} />
-                <Tab icon={<i className="ti-comment-alt"></i>} label={<IntlMessages id="widgets.messages" />} />
-                <Tab icon={<i className="ti-home"></i>} label={<IntlMessages id="components.address" />} />
+                <Tab icon={<i className="ti-user"></i>} label={"Account"} />
+                <Tab icon={<i className="ti-user"></i>} label={"Subscriptions"} />
+                <Tab icon={<i className="ti-user"></i>} label={"Transaction"} />
+                <Tab icon={<i className="ti-user"></i>} label={"Card"} />
               </Tabs>
             </AppBar>
             {activeTab === 0 &&
@@ -68,15 +68,15 @@ export default class UserProfile extends Component {
               </TabContainer>}
             {activeTab === 1 &&
               <TabContainer>
-                <EmailPrefrences />
+                <Subscription />
               </TabContainer>}
             {activeTab === 2 &&
               <TabContainer>
-                <Messages />
+                <Transaction />
               </TabContainer>}
             {activeTab === 3 &&
               <TabContainer>
-                <Address />
+                <Card />
               </TabContainer>}
           </div>
         </RctCard>

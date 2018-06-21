@@ -22,99 +22,70 @@ export default class Profile extends Component {
   render() {
     return (
       <div className="profile-wrapper w-50">
-        <h2 className="heading"><IntlMessages id="widgets.personalDetails" /></h2>
+        <h2 className="heading">Account Details</h2>
         <Form>
           <FormGroup row>
-            <Label for="firstName" sm={3}><IntlMessages id="components.firstName" /></Label>
+            <Label for="accountId" sm={3}>Account Id</Label>
             <Col sm={9}>
-              <Input type="text" name="firstName" id="firstName" className="input-lg" />
+              <Input disabled type="text" name="accountId" id="accountId" className="input-lg" value="1" />
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label for="lastName" sm={3}><IntlMessages id="components.lastName" /></Label>
+            <Label for="accountNo" sm={3}>Account No</Label>
             <Col sm={9}>
-              <Input type="text" name="lastName" id="lastName" className="input-lg" />
+              <Input type="text" name="accountNo" id="accountNo" className="input-lg" value="100029921" />
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label for="occupation" sm={3}><IntlMessages id="components.occupation" /></Label>
+            <Label for="address" sm={3}>Address</Label>
             <Col sm={9}>
-              <Input type="text" name="occupation" id="occupation" className="input-lg" />
+              <Input type="text" name="address" id="address" className="input-lg" value="159/3A, west sgeparapara." />
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label for="company" sm={3}><IntlMessages id="components.companyName" /></Label>
+            <Label for="apartment" sm={3}>Apartment</Label>
             <Col sm={9}>
-              <Input type="text" name="company" id="company" className="input-lg mb-20" />
-              <div className="help-text d-flex p-10">
-                <i className="ti-info-alt mr-15 pt-5"></i>
-                <span>If you want your invoices addressed to a company. Leave blank to use your full name.</span>
-              </div>
+              <Input type="text" name="apartment" id="apartment" className="input-lg" value="4A" />
             </Col>
           </FormGroup>
           <FormGroup row>
-            <Label for="telephone" sm={3}><IntlMessages id="components.phoneNo" /></Label>
+            <Label for="city" sm={3}>City</Label>
             <Col sm={9}>
-              <Input type="tel" name="telephone" id="telephone" className="input-lg" />
+              <Input type="text" name="city" id="city" className="input-lg" value="Dhaka" />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="area" sm={3}>Area</Label>
+            <Col sm={9}>
+              <Input type="text" name="area" id="area" className="input-lg" value="Mirpure" />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="subArea" sm={3}>Sub Area</Label>
+            <Col sm={9}>
+              <Input type="text" name="subArea" id="subArea" className="input-lg" value="Shewrapara" />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="postalCode" sm={3}>Postal Code</Label>
+            <Col sm={9}>
+              <Input type="text" name="postalCode" id="postalCode" className="input-lg" value="1212" />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="balance" sm={3}>Balance</Label>
+            <Col sm={9}>
+              <Input disabled type="text" name="balance" id="balance" className="input-lg" value="-90" />
+            </Col>
+          </FormGroup>
+          <FormGroup row>
+            <Label for="status" sm={3}>Status</Label>
+            <Col sm={9}>
+              <Input type="text" name="status" id="status" className="input-lg" value="Active" disabled />
             </Col>
           </FormGroup>
         </Form>
-        <hr />
-        <h2 className="heading"><IntlMessages id="components.address" /></h2>
-        <Form>
-          <FormGroup row>
-            <Label for="address" sm={3}><IntlMessages id="components.address" /></Label>
-            <Col sm={9}>
-              <Input type="text" name="address" id="address" className="input-lg" />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="city" sm={3}><IntlMessages id="components.city" /></Label>
-            <Col sm={9}>
-              <Input type="text" name="city" id="city" className="input-lg" />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="state" sm={3}><IntlMessages id="components.state" /></Label>
-            <Col sm={9}>
-              <Input type="text" name="state" id="state" className="input-lg" />
-            </Col>
-          </FormGroup>
-          <FormGroup row>
-            <Label for="zip" sm={3}><IntlMessages id="components.zipCode" /></Label>
-            <Col sm={9}>
-              <Input type="text" name="zip" id="zip" className="input-lg" />
-            </Col>
-          </FormGroup>
-        </Form>
-        <hr />
-        <h2 className="heading"><IntlMessages id="components.social Connection" /></h2>
-        <div>
-          <InputGroup className="mb-20">
-            <InputGroupAddon addonType="prepend">
-              <IconButton aria-label="facebook">
-                <i className="zmdi zmdi-facebook"></i>
-              </IconButton>
-            </InputGroupAddon>
-            <Input defaultValue="https://www.facebook.com" />
-          </InputGroup>
-          <InputGroup className="mb-20">
-            <InputGroupAddon addonType="prepend">
-              <IconButton aria-label="facebook">
-                <i className="zmdi zmdi-twitter"></i>
-              </IconButton>
-            </InputGroupAddon>
-            <Input defaultValue="https://www.twitter.com" />
-          </InputGroup>
-          <InputGroup className="mb-20">
-            <InputGroupAddon addonType="prepend">
-              <IconButton aria-label="facebook">
-                <i className="zmdi zmdi-linkedin"></i>
-              </IconButton>
-            </InputGroupAddon>
-            <Input defaultValue="https://www.linkedin.com" />
-          </InputGroup>
-        </div>
+        
         <hr />
         <Button variant="raised" color="primary" className="text-white" onClick={() => this.onUpdateProfile()}><IntlMessages id="widgets.updateProfile" /></Button>
       </div>

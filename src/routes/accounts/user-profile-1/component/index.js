@@ -38,7 +38,7 @@ const data = [
 	createData('Gingerbread', 356, 16.0, 49, 3.9),
 ];
 
-class BasicTable extends Component {
+class Subcriptions extends Component {
 
 	state = {
 		employeePayroll: null
